@@ -1,24 +1,44 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>DemoUi</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>User Profile Card</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="card" role="region" aria-labelledby="user-name">
+    <div class="card-header">
+      <img src="./assets/gImg.png" alt="User Avatar" class="avatar">
+      <div class="user-info">
+        <h2 id="user-name">Samira Patel</h2>
+        <p class="role">Frontend Developer</p>
+      </div>
+    </div>
 
-    {{content-for "head"}}
+    <div class="controls">
+      <button 
+        id="toggleButton" 
+        class="btn"
+        aria-controls="moreContent" 
+        aria-expanded="false">
+        Show more <span id="toggleIcon">▼</span>
+      </button>
+    </div>
 
-    <link integrity="" rel="stylesheet" href="{{rootURL}}assets/vendor.css">
-    <link integrity="" rel="stylesheet" href="{{rootURL}}assets/demo-ui.css">
+    <div 
+      id="moreContent" 
+      class="more" 
+      aria-hidden="true" 
+      tabindex="-1"
+      hidden>
+      <p><strong>Email:</strong> samira@example.com</p>
+      <p><strong>Location:</strong> San Francisco, CA</p>
+      <p><strong>Bio:</strong> Passionate about building interactive and accessible user interfaces. Loves JavaScript, React, and all things web.</p>
+    </div>
 
-    {{content-for "head-footer"}}
-  </head>
-  <body>
-    {{content-for "body"}}
+  </div>
 
-    <script src="{{rootURL}}assets/vendor.js"></script>
-    <script src="{{rootURL}}assets/demo-ui.js"></script>
-
-    {{content-for "body-footer"}}
-  </body>
+  <script src="script.js"></script>
+</body>
 </html>
