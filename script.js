@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     const toggleButton = document.getElementById("toggleButton");
-    const toggleIcon = document.getElementById("toggleIcon");
+    // const toggleIcon = document.getElementById("toggleIcon");
     const moreContent = document.getElementById("moreContent");
 
     toggleButton.addEventListener("click", () => {
@@ -11,6 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
             moreContent.setAttribute("aria-hidden", "true");
             toggleButton.setAttribute("aria-expanded", "false");
             toggleButton.innerHTML = 'Show more <span id="toggleIcon">▼</span>';
+            toggleButton.setAttribute('aria-label',"show more about Samira Patel")
         } else {
             moreContent.hidden = false;
             moreContent.setAttribute("aria-hidden", "false");
