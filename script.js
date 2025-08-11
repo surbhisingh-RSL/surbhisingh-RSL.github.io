@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
             moreContent.setAttribute("aria-hidden", "true");
             toggleButton.setAttribute("aria-expanded", "false");
             toggleButton.innerHTML = 'Show more <span id="toggleIcon">▼</span>';
-            toggleButton.setAttribute('aria-label',"show more about Samira Patel")
+            // toggleButton.setAttribute('aria-label',"show more about Samira Patel")
         } else {
             moreContent.hidden = false;
             moreContent.setAttribute("aria-hidden", "false");
